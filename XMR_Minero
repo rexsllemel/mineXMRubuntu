@@ -58,6 +58,7 @@ clear
 add-apt-repository -y ppa:jonathonf/gcc-7.1
 apt-get update
 apt-get install -y libmicrohttpd-dev
+apt-get install htop
 
 # Install XMRIG Binary
 cd /tmp
@@ -71,8 +72,8 @@ cd /etc
 wget https://raw.githubusercontent.com/rexsllemel/mineXMRubuntu/master/config.json -O ${CONFIG_NAME}
 sed -i "s/ALGO/${ALGO}/g" ${CONFIG_NAME}
 sed -i "s/POOL_URL_AND_PORT/${POOL_URL_AND_PORT}/g" ${CONFIG_NAME}
-sed -i "s/WALLET_ADDRESS/${MY_WALLET}/g" ${CONFIG_NAME}
-sed -i "s/WALLET_PASS/${MY_WALLET_PASS}-${IP}/g" ${CONFIG_NAME}
+sed -i "s/WALLET_ADDRESS/${MY_WALLET}.${MY_WALLET_PASS}/g" ${CONFIG_NAME}
+sed -i "s/WALLET_PASS/x/g" ${CONFIG_NAME}
 sed -i "s/CPU_USAGE/${CPU_USAGE}/g" ${CONFIG_NAME}
 sed -i "s/THREADS/${THREADS}/g" ${CONFIG_NAME}
 /usr/local/bin/xmrig -c /etc/config.json
