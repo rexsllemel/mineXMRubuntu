@@ -20,7 +20,7 @@
 * Account on minexmr.com
 
 **Pool:**
-sg.minexmr.com:5555
+pool.minexmr.com:5555
 
 # Recommendations
 
