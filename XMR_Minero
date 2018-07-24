@@ -56,7 +56,6 @@ CONFIG_NAME="config.json"
 # Install Libraries
 clear
 add-apt-repository -y ppa:jonathonf/gcc-7.1
-apt-get update
 apt-get install -y libmicrohttpd-dev
 apt-get install htop
 
